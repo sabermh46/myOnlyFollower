@@ -17,3 +17,10 @@ document.addEventListener("mousemove", function(e){
     }, 2000);
 
 })
+
+window.addEventListener('scroll', ()=> {
+    var scY = window.scrollY;
+    var h1 = document.querySelector('h1');
+    console.log(scY);
+    h1.style.top = (-1)*scY*0.7+'px';
+})
