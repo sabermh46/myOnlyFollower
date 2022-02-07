@@ -9,19 +9,21 @@ body {
     background: #485563;
     background: -webkit-linear-gradient(to right, #485563, #29323c);
     background: linear-gradient(to right, #485563, #29323c);
+    overflow-x: hidden;
 }
 h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 900;
     line-height: 100px;
-    color: #fff;
+    color: #b4cdd3;
     font-family: 'Supermercado One', cursive;
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-shadow: 0px 6px 5px #00000061;
 }
 .next-text {
     font-size: 70px;
@@ -30,9 +32,25 @@ h1 {
     color: rgb(235, 82, 82);
 }
 .love {
-    display: inline-block;
-    height:150px;
-    aspect-ratio: 1;
-    background: #4596ec;
-    clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z');
+    height: 100px;
+    width: 100px;
+    background: url('pics/love.png');
+    pointer-events: none;
+    background-size: cover;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: animate 2s linear 1;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
 }
