@@ -1,6 +1,6 @@
 
 document.addEventListener("mousemove", function(e){
-    var body = document.querySelector('body');
+    var body =  document.querySelector('*');
     var heart = document.createElement("span");
     heart.classList.add('love');
     var x = e.offsetX;
@@ -21,6 +21,23 @@ document.addEventListener("mousemove", function(e){
 window.addEventListener('scroll', ()=> {
     var scY = window.scrollY;
     var h1 = document.querySelector('h1');
-    console.log(scY);
     h1.style.top = (-1)*scY*0.7+'px';
 })
+
+
+const card = document.querySelector('.tiltCard');
+
+card.addEventListener('mousemove', cardMouseMove);
+
+function cardMouseMove(event) {
+    const cardW = card.offsetWidth;
+    const cardH = card.offsetHeight;
+    const centerX = card.offsetLeft + cardW/2;
+    const centerY = card.offsetTop + cardH/2;
+    const mouseX = event.clientX - centerX;
+    const mouseY = event.clientY - centerY;
+    const rotateX = 25 * mouseY / (cardW/2);
+    const rotateY = 25 * mouseX / (cardH/2);
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+}
