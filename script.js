@@ -21,7 +21,7 @@ document.addEventListener("mousemove", function(e){
 window.addEventListener('scroll', ()=> {
     var scY = window.scrollY;
     var h1 = document.querySelector('h1');
-    h1.style.top = (-1)*scY*0.5+'px';
+    h1.style.top = scY*0.5+'px';
 })
 
 
