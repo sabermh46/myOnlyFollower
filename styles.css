@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rowdies&family=Supermercado+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Rowdies&family=Supermercado+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -115,6 +114,29 @@ h1 {
 }
 h3.tiltText {
     font-size: 40px !important;
+}
+
+.sect3 {
+    margin-top: 100px;
+    height: 150vh;
+    overflow-y: hidden;
+    background: black;
+}
+.sect3 p {
+    position: relative;
+    width: 100%;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    line-height: 0.7em;
+    background: url(pics/nuhin.jpg);
+    font-family: 'Fira Sans', sans-serif;
+    background-blend-mode: color-dodge;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: justify;
 }
 
 @media (max-width:500px) and (min-width:1px) {
